@@ -16,7 +16,7 @@ class Flatmate:
         self.name = name
 
     def pays(self, bill):
-        pass
+        return bill.amount / 2
 
 
 class PdfReport:
@@ -31,3 +31,8 @@ class PdfReport:
         pass
 
 
+the_bill = Bill(amount=120, period = "March 2021")
+john = Flatmate(name="John", days_in_house=20)
+marry = Flatmate(name="Marry", days_in_house=25)
+
+print(john.pays(bill=the_bill))
