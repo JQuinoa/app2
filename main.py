@@ -40,7 +40,7 @@ class PdfReport:
         pdf = FPDF(orientation='P', unit='pt', format='A4')
         pdf.add_page()
 
-        #Add icon
+        # Add icon
         pdf.image("house.png", w=30, h=30)
 
         # Insert title
@@ -65,8 +65,10 @@ class PdfReport:
         pdf.output(self.filename)
         webbrowser.open(self.filename)
 
+amount = float(input("Hey user, enter the bill amount:"))
+print("This is a", a)
 
-the_bill = Bill(amount=120, period="April 2021")
+the_bill = Bill(amount= a, period="April 2021")
 john = Flatmate(name="John", days_in_house=20)
 marry = Flatmate(name="Marry", days_in_house=25)
 
